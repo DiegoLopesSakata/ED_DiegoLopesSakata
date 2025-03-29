@@ -1,3 +1,4 @@
 beecrowd
 *.txt
 *.exe
+*.o
