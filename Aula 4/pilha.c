@@ -52,7 +52,3 @@ int inverte_pilha(t_pilha *p){
     
     return 1;
 }
-
-int convert_bin(int *a){
-    
-}
