@@ -8,11 +8,26 @@ int main(){
 
     constroi_pilha(&p, TAM);
     fgets(frase, sizeof(frase), stdin);
-    for(int i = 0; i < strlen(frase); i++){
+    frase[strcspn(frase, "\n")] = '\0';
+
+    for(int i = 0; i < strlen(frase); i++) {
         push(&p, frase[i]);
     }
 
     exibir_pilha(&p);
+    if(palindromo(&p)){
+        printf("A frase eh um palindromo\n");
+    }
+    else{
+        printf("A frase nao eh palindromo\n");
+    }
+
+    if(parenteses_corretos(&p)){
+        printf("A frase tem a parentizacao correta\n");
+    }
+    else{
+        printf("A parentizacao nao esta correta\n");
+    }
 
     return 0;
 }

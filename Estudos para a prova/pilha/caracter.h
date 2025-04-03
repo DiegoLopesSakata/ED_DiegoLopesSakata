@@ -15,3 +15,4 @@ int pilha_cheia(pilha_carac *p);
 int pop(pilha_carac *p, char *removido);
 int push(pilha_carac *p, char carac);
 int parenteses_corretos(pilha_carac *p);
+int palindromo(pilha_carac *p);

@@ -7,16 +7,16 @@ void constroi_pilha(pilha_carac *p, int capacidade){
 }
 
 void exibir_pilha(pilha_carac *p){
-    printf("--------");
+    printf("--------\n");
     if(pilha_vazia(p)){
         printf("A pilha esta vazia\n");
     }
     else{
-        for(int i = p->topo; i >= 0; i--){
+        for(int i = p->topo - 1; i >= 0; i--){
             printf("%c\n", p->dados[i]);
         }
     }
-    printf("--------");
+    printf("--------\n");
 }
 
 int pilha_vazia(pilha_carac *p){
@@ -39,15 +39,34 @@ int push(pilha_carac *p, char carac){
     return 1;
 }
 
-int parenteses_corretos(pilha_carac *p){
-    for(int i = p->topo; i <= 0; i--){
-        if(p->dados[i] == '('){
-            if(p->dados[i] == ')'){
-                return 1;
+int parenteses_corretos(pilha_carac *p) {
+    pilha_carac a;
+    constroi_pilha(&a, p->capacidade);
+
+    for (int i = 0; i < p->topo; i++) {
+        if (p->dados[i] == '(' || p->dados[i] == '[' || p->dados[i] == '{') {
+            push(&a, p->dados[i]);
+        }
+        else if (p->dados[i] == ')' || p->dados[i] == ']' || p->dados[i] == '}') {
+            if (pilha_vazia(&a)) {
+                return 0; 
             }
-            else{
+            char topo;
+            pop(p, &topo);
+            if ((p->dados[i] == ')' && topo != '(') ||
+                (p->dados[i] == ']' && topo != '[') ||
+                (p->dados[i] == '}' && topo != '{')) {
                 return 0;
             }
         }
     }
+
+    return pilha_vazia(&a);
+}
+
+int palindromo(pilha_carac *p){
+    for(int i = 0; i < p->topo; i++){
+        if(p->dados[i] != p->dados[--p->topo]) return 0;
+    }
+    return 1;
 }
