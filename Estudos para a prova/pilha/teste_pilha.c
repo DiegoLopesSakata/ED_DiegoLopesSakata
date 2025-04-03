@@ -73,5 +73,45 @@ int main(){
     p3 = pilha_decrescente(&p, &p2);
     exibe_pilha(p3);
 
+    printf("Outro Teste - binario!\n");
+
+    int n;
+
+    printf("Digite um numero inteiro para ser transformado em binario: ");
+    scanf("%d", &n);
+
+    t_pilha *bin;
+    bin = binario(n);
+    exibe_pilha(bin);
+
+    printf("Outro Teste - transfere_pilha!\n");
+
+    t_pilha *a;
+    a = transfere_pilha(bin);
+    exibe_pilha(a);
+
+    printf("Outro Teste - encontrar_valor!\n");
+
+    pop_mais(&p, p.topo);
+    push(&p, 76);
+    push(&p, 71);
+    push(&p, 54);
+    push(&p, 49);
+    push(&p, 42);
+    push(&p, 38);
+    push(&p, 18);
+    push(&p, 16);
+    push(&p, 6);
+    push(&p, 1);
+    exibe_pilha(&p);
+    printf("Digite o valor que deseja encontrar na pilha: ");
+    scanf("%d", &n);
+    if(encontrar_valor(&p, n) == -1){
+        printf("O valor %d nao esta na pilha\n", n);
+    }
+    else{
+        printf("O valor %d esta na pilha!\n", n);
+    }
+
     return 0;
 }

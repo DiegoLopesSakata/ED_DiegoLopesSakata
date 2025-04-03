@@ -70,6 +70,15 @@ int inverte_pilha(t_pilha *p){
     return 1;
 }
 
+int encontrar_valor(t_pilha *p, int x){
+    for (int i = 0; i <= p->topo; i++) {
+        if (p->dados[i] == x) {
+            return i;
+        }
+    }
+    return -1;
+}
+
 t_pilha* par_impar(t_pilha *p){
     int a, countp = 0, counti = 0;
 
@@ -128,4 +137,52 @@ t_pilha *pilha_decrescente(t_pilha *p1, t_pilha *p2){
     }
 
     return p3;
+}
+
+t_pilha* binario(int n){
+    if(n == 0){
+        t_pilha *p = (t_pilha *) malloc (sizeof(t_pilha));
+        constroi_pilha(p, 1);
+        push(p, 0);
+        return p;
+    }
+
+    int temp = n;
+    int capacidade = 0;
+
+    while(temp != 0){
+        capacidade++;
+        temp = temp / 2;
+    }
+
+    t_pilha *p = (t_pilha *) malloc (sizeof(t_pilha));
+    constroi_pilha(p, capacidade);
+
+    if(n < 0){
+        n = n * -1;
+
+        while(n != 0){
+            int bit = n % 2;
+            push(p, bit);
+            n = n / 2;
+        }
+        inverte_pilha(p);
+    }
+    else{
+        while(n != 0){
+            int bit = n % 2;
+            push(p, bit);
+            n = n / 2;
+        }
+    }
+
+    return p;
+}
+
+t_pilha* transfere_pilha(t_pilha *p){
+    t_pilha *aux = (t_pilha *) malloc (sizeof(t_pilha));
+    constroi_pilha(aux, p->capacidade);
+    aux->dados = p->dados;
+    aux->topo = p->topo;
+    return aux;
 }

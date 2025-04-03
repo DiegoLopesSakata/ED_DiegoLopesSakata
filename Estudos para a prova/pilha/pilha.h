@@ -18,7 +18,10 @@ int push(t_pilha *p, int dado);
 void exibe_pilha(t_pilha *p);
 int pop_mais(t_pilha *p, int quantidade);
 int inverte_pilha(t_pilha *p);
+int encontrar_valor(t_pilha *p, int x);
 t_pilha* par_impar(t_pilha *p);
 t_pilha* pilha_decrescente(t_pilha *p1, t_pilha *p2);
+t_pilha* binario(int n);
+t_pilha* transfere_pilha(t_pilha *p);
 
 #endif
