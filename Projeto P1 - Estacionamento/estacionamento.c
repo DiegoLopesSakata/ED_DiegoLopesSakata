@@ -49,8 +49,34 @@ int estacionar(t_estacionamento *estacionamento, t_carro_estacionado carro){
     return 1;
 }
 
-int sair(t_estacionamento estacionamento, t_carro carro){
+int retirar(t_estacionamento *estacionamento, t_carro_estacionado *removido){
     if(estacionamento_vazio) return 0;
     estacionamento.carros[--quantidade];
+    return 1;
+}
+
+int manobrar(t_estacionamento *estacionamento, t_carro_estacionado carro){
+    t_carro_estacionado removido;
+    int i = 1;
+
+    if(carro == estacionamento.carros[0]){
+        retirar(estacionamento, &removido);
+        return 1;
+    }
+
+    t_carro_estacionado aux = (t_carro_estacionado *) malloc (estacionamento.capacidade * sizeof(t_carro_estacionado));
+    
+    while(carro != estacionamento.carros[i]){
+        if(estacionamento_vazio) return 0;
+        retirar(estacionamento, &removido);
+        estacionar(&aux, removido);
+        i++
+    }
+    retirar(estacionamento, &removido);
+
+    while(retirar(&aux, &removido)){
+        estacionar(estacionamento, &removido);
+    }
+
     return 1;
 }
