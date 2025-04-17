@@ -1,16 +1,26 @@
-#ifdef
-
 #include <stdio.h>
-#include <ctype.h>
+#include <stdlib.h>
+#include <string.h>
 
-void construir_carro(t_carro *c, char placa[]);
-void construir_carro_estacionado(t_carro_estacionado *ct, t_carro c);
-void construir_estacionamento(t_estacionamento *e, int max);
-void exibir_estacionamento(t_estacionamento *estacionamento);
+#define MAX_CARROS 10
+
+typedef struct{
+    char placa[8];
+} t_carro;
+
+typedef struct{
+    t_carro carro;
+    int manobras;
+} t_carro_estacionado;
+
+typedef struct{
+    t_carro_estacionado *carros;
+    int capacidade;
+    int quantidade;
+} t_estacionamento;
+
+void construir_estacionamento(t_estacionamento *e);
 int estacionamento_vazio(t_estacionamento *estacionamento);
 int estacionamento_cheio(t_estacionamento *estacionamento);
-int estacionar(t_estacionamento *estacionamento, t_carro_estacionado *carro);
-int retirar(t_estacionamento *estacionamento, t_carro_estacionado *removido);
-int manobrar(t_estacionamento *estacionamento, t_carro_estacionado carro);
-
-#endif
+int estacionar(t_estacionamento *estacionamento, t_carro carro);
+int retirar(t_estacionamento *estacionamento, t_carro carro);
