@@ -3,9 +3,10 @@
 #include <string.h>
 
 #define MAX_CARROS 10
+#define MAX_PLACA 8
 
 typedef struct{
-    char placa[8];
+    char placa[MAX_PLACA];
 } t_carro;
 
 typedef struct{
@@ -20,6 +21,7 @@ typedef struct{
 } t_estacionamento;
 
 void construir_estacionamento(t_estacionamento *e);
+void exibir_estacionamento(t_estacionamento *e);
 int estacionamento_vazio(t_estacionamento *estacionamento);
 int estacionamento_cheio(t_estacionamento *estacionamento);
 int estacionar(t_estacionamento *estacionamento, t_carro carro);

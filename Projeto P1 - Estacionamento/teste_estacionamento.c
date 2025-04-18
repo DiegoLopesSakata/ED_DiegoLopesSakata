@@ -15,15 +15,17 @@ int main() {
         printf("Operacoes:\n");
         printf("0 - Entrada de carro\n");
         printf("1 - Saida de carro\n");
-        printf("2 - Sair do programa\n\n");
+        printf("2 - Sair do programa\n");
+        printf("3 - Exibir Estacionamento\n\n");
 
         printf("Escolha: ");
         scanf("%d", &operacao);
+        getchar();
 
         switch(operacao){
             case 0: printf("Digite a placa do carro (7 caracteres): ");
-                    scanf("%7s", carro.placa);
-                    carro.placa[7] = '\0';
+                    fgets(carro.placa, MAX_PLACA + 1, stdin);
+                    carro.placa[strcspn(carro.placa, "\n")] = '\0';
                     if (estacionar(&estacionamento, carro)) {
                         printf("Carro %s estacionado!\n\n", carro.placa);
                     }
@@ -32,8 +34,8 @@ int main() {
                     }
                     break;
             case 1: printf("Digite a placa do carro (sem caracteres especiais ou espacos): ");
-                    scanf("%7s", carro.placa);
-                    carro.placa[7] = '\0';
+                    fgets(carro.placa, MAX_PLACA + 1, stdin);
+                    carro.placa[strcspn(carro.placa, "\n")] = '\0';
                     manobras = retirar(&estacionamento, carro);
                     if (manobras == -1) {
                         printf("Estacionamento vazio. Nao ha carros para sair.\n\n");
@@ -48,6 +50,9 @@ int main() {
             case 2: if (operacao == 2) {
                     return 0;
                     }
+            case 3: printf("Carros no estacionamento (ordem de chegada):\n");
+                    exibir_estacionamento(&estacionamento);
+                    break;
             default: printf("Operacao invalida.\n\n");
         }
     

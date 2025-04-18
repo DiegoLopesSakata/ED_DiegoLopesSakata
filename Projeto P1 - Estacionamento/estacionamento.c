@@ -6,6 +6,13 @@ void construir_estacionamento(t_estacionamento *e){
     e->quantidade = 0;
 }
 
+void exibir_estacionamento(t_estacionamento *e){
+    for(int i = e->quantidade - 1; i >= 0; i--){
+        printf("%d: %s\n", i + 1, e->carros[i].carro.placa);
+    }
+    printf("\n");
+}
+
 int estacionamento_vazio(t_estacionamento *estacionamento){
     return estacionamento->quantidade == 0;
 }
@@ -16,8 +23,8 @@ int estacionamento_cheio(t_estacionamento *estacionamento){
 
 int estacionar(t_estacionamento *estacionamento, t_carro carro){
     if(estacionamento_cheio(estacionamento)) return 0;
-    strncpy(estacionamento->carros[estacionamento->quantidade].carro.placa, carro.placa, 7);
-    estacionamento->carros[estacionamento->quantidade].carro.placa[7] = '\0';
+    strncpy(estacionamento->carros[estacionamento->quantidade].carro.placa, carro.placa, MAX_PLACA);
+    estacionamento->carros[estacionamento->quantidade].carro.placa[MAX_PLACA] = '\0';
     estacionamento->carros[estacionamento->quantidade].manobras = 0;
     estacionamento->quantidade++;
     
@@ -44,21 +51,12 @@ int retirar(t_estacionamento *estacionamento, t_carro carro){
         return manobras;
     }
 
-    t_carro_estacionado *aux;
-    aux = (t_carro_estacionado *) malloc (estacionamento->capacidade * sizeof(t_carro_estacionado));
-    int num_removidos = 0;
-
-    for(int i = estacionamento->quantidade - 1; i > pos; i--){
-        aux[num_removidos++] = estacionamento->carros[i];
+    for(int i = pos; i < estacionamento->quantidade; i++){
+        estacionamento->carros[i] = estacionamento->carros[i + 1];
+        estacionamento->carros[i].manobras++;
     }
 
-    estacionamento->quantidade = pos;   
+    estacionamento->quantidade--;
 
-    for(int i = num_removidos; i >= 0; i--){
-        estacionamento->carros[estacionamento->quantidade++] = aux[i];
-        estacionamento->carros[estacionamento->quantidade - 1].manobras++;
-    }
-
-    free(aux);
     return manobras;
 }
