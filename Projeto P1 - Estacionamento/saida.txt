@@ -1,0 +1,268 @@
+Estacionamento Bashemin
+Operacoes:
+0 - Entrada de carro
+1 - Saida de carro
+2 - Sair do programa
+3 - Exibir Estacionamento
+
+Escolha: 0
+
+Carro ABC2A15 estacionado!
+
+Estacionamento Bashemin
+Operacoes:
+0 - Entrada de carro
+1 - Saida de carro
+2 - Sair do programa
+3 - Exibir Estacionamento
+
+Escolha: 0
+
+Carro FWH9700 estacionado!
+
+Estacionamento Bashemin
+Operacoes:
+0 - Entrada de carro
+1 - Saida de carro
+2 - Sair do programa
+3 - Exibir Estacionamento
+
+Escolha: 0
+
+Carro ASD5J98 estacionado!
+
+Estacionamento Bashemin
+Operacoes:
+0 - Entrada de carro
+1 - Saida de carro
+2 - Sair do programa
+3 - Exibir Estacionamento
+
+Escolha: 3
+
+Carros no estacionamento (ordem de chegada):
+3: ASD5J98
+2: FWH9700
+1: ABC2A15
+
+Estacionamento Bashemin
+Operacoes:
+0 - Entrada de carro
+1 - Saida de carro
+2 - Sair do programa
+3 - Exibir Estacionamento
+
+Escolha: 1
+
+Carro ASD5J98 saiu. Foi manobrado 0 vezes.
+
+Estacionamento Bashemin
+Operacoes:
+0 - Entrada de carro
+1 - Saida de carro
+2 - Sair do programa
+3 - Exibir Estacionamento
+
+Escolha: 0
+
+Carro BVG1245 estacionado!
+
+Estacionamento Bashemin
+Operacoes:
+0 - Entrada de carro
+1 - Saida de carro
+2 - Sair do programa
+3 - Exibir Estacionamento
+
+Escolha: 0
+
+Carro HGJ8Y64 estacionado!
+
+Estacionamento Bashemin
+Operacoes:
+0 - Entrada de carro
+1 - Saida de carro
+2 - Sair do programa
+3 - Exibir Estacionamento
+
+Escolha: 0
+
+Carro AGJ9A84 estacionado!
+
+Estacionamento Bashemin
+Operacoes:
+0 - Entrada de carro
+1 - Saida de carro
+2 - Sair do programa
+3 - Exibir Estacionamento
+
+Escolha: 0
+
+Carro NHJ4K57 estacionado!
+
+Estacionamento Bashemin
+Operacoes:
+0 - Entrada de carro
+1 - Saida de carro
+2 - Sair do programa
+3 - Exibir Estacionamento
+
+Escolha: 0
+
+Carro GPO2S58 estacionado!
+
+Estacionamento Bashemin
+Operacoes:
+0 - Entrada de carro
+1 - Saida de carro
+2 - Sair do programa
+3 - Exibir Estacionamento
+
+Escolha: 3
+
+Carros no estacionamento (ordem de chegada):
+7: GPO2S58
+6: NHJ4K57
+5: AGJ9A84
+4: HGJ8Y64
+3: BVG1245
+2: FWH9700
+1: ABC2A15
+
+Estacionamento Bashemin
+Operacoes:
+0 - Entrada de carro
+1 - Saida de carro
+2 - Sair do programa
+3 - Exibir Estacionamento
+
+Escolha: 1
+
+Carro ABC2A15 saiu. Foi manobrado 0 vezes.
+
+Estacionamento Bashemin
+Operacoes:
+0 - Entrada de carro
+1 - Saida de carro
+2 - Sair do programa
+3 - Exibir Estacionamento
+
+Escolha: 0
+
+Carro HGJ9A84 estacionado!
+
+Estacionamento Bashemin
+Operacoes:
+0 - Entrada de carro
+1 - Saida de carro
+2 - Sair do programa
+3 - Exibir Estacionamento
+
+Escolha: 0
+
+Carro BIP5186 estacionado!
+
+Estacionamento Bashemin
+Operacoes:
+0 - Entrada de carro
+1 - Saida de carro
+2 - Sair do programa
+3 - Exibir Estacionamento
+
+Escolha: 0
+
+Carro QWE5H78 estacionado!
+
+Estacionamento Bashemin
+Operacoes:
+0 - Entrada de carro
+1 - Saida de carro
+2 - Sair do programa
+3 - Exibir Estacionamento
+
+Escolha: 0
+
+Carro JHF4589 estacionado!
+
+Estacionamento Bashemin
+Operacoes:
+0 - Entrada de carro
+1 - Saida de carro
+2 - Sair do programa
+3 - Exibir Estacionamento
+
+Escolha: 0
+
+Nao ha vagas para o carro HFS1248.
+
+Estacionamento Bashemin
+Operacoes:
+0 - Entrada de carro
+1 - Saida de carro
+2 - Sair do programa
+3 - Exibir Estacionamento
+
+Escolha: 3
+
+Carros no estacionamento (ordem de chegada):
+10: JHF4589
+9: QWE5H78
+8: BIP5186
+7: HGJ9A84
+6: GPO2S58
+5: NHJ4K57
+4: AGJ9A84
+3: HGJ8Y64
+2: BVG1245
+1: FWH9700
+
+Estacionamento Bashemin
+Operacoes:
+0 - Entrada de carro
+1 - Saida de carro
+2 - Sair do programa
+3 - Exibir Estacionamento
+
+Escolha: 1
+
+Carro QWE5H78 saiu. Foi manobrado 0 vezes.
+
+Estacionamento Bashemin
+Operacoes:
+0 - Entrada de carro
+1 - Saida de carro
+2 - Sair do programa
+3 - Exibir Estacionamento
+
+Escolha: 1
+
+Carro FWH9700 saiu. Foi manobrado 1 vezes.
+
+Estacionamento Bashemin
+Operacoes:
+0 - Entrada de carro
+1 - Saida de carro
+2 - Sair do programa
+3 - Exibir Estacionamento
+
+Escolha: 3
+
+Carros no estacionamento (ordem de chegada):
+8: JHF4589
+7: BIP5186
+6: HGJ9A84
+5: GPO2S58
+4: NHJ4K57
+3: AGJ9A84
+2: HGJ8Y64
+1: BVG1245
+
+Estacionamento Bashemin
+Operacoes:
+0 - Entrada de carro
+1 - Saida de carro
+2 - Sair do programa
+3 - Exibir Estacionamento
+
+Escolha: 2
+

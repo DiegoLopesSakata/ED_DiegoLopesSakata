@@ -1,3 +1,5 @@
+//Integrantes: Diego Lopes Sakata, Cauê Ferreira Lacerda, Pedro Yun Han
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

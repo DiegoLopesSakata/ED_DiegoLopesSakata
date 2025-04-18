@@ -1,3 +1,5 @@
+//Integrantes: Diego Lopes Sakata, Cauê Ferreira Lacerda, Pedro Yun Han
+
 #include "estacionamento.h"
 
 void construir_estacionamento(t_estacionamento *e){
