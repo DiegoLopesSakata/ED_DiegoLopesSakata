@@ -53,12 +53,25 @@ int retirar(t_estacionamento *estacionamento, t_carro carro){
         return manobras;
     }
 
-    for(int i = pos; i < estacionamento->quantidade; i++){
-        estacionamento->carros[i] = estacionamento->carros[i + 1];
-        estacionamento->carros[i].manobras++;
+
+    t_estacionamento rua;
+    construir_estacionamento(&rua);
+    int j = 0;
+
+    for(int i = estacionamento->quantidade - 1; i > pos; i--){
+        rua.carros[j] = estacionamento->carros[i];
+        rua.carros[j].manobras++;
+        estacionamento->quantidade--;
+        j++;
     }
 
     estacionamento->quantidade--;
+
+    for(int i = j - 1; i >= 0; i--){
+        estacionamento->carros[estacionamento->quantidade++] = rua.carros[i];
+    }    
+
+    free(rua.carros);
 
     return manobras;
 }
