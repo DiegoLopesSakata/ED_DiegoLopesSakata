@@ -25,7 +25,7 @@ int main(){
     push(&p, 79);
     push(&p, 36);
     exibe_pilha(&p);
-    rem = pop_mais(&p, 9);
+    pop_mais(&p, 10, &rem);
     printf("Foram removidos %d valores\n", rem);
     exibe_pilha(&p);
 
@@ -49,7 +49,7 @@ int main(){
 
     t_pilha p2, *p3;
     constroi_pilha(&p2, p.capacidade);
-    pop_mais(&p, 7);
+    pop_mais(&p, 7, &rem);
     push(&p, 76);
     push(&p, 71);
     push(&p, 54);
@@ -92,7 +92,7 @@ int main(){
 
     printf("Outro Teste - encontrar_valor!\n");
 
-    pop_mais(&p, p.topo);
+    pop_mais(&p, p.topo, &rem);
     push(&p, 76);
     push(&p, 71);
     push(&p, 54);

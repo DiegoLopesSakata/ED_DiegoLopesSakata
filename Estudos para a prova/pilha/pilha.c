@@ -41,18 +41,18 @@ void exibe_pilha(t_pilha *p){
     printf("------\n");
 }
 
-int pop_mais(t_pilha *p, int quantidade){
-    int a, removidos;
-    removidos = 0;
+int pop_mais(t_pilha *p, int quantidade, int *removidos){
+    int a;
+    *removidos = 0;
     if(pilha_vazia(p)) return 0;
     if(quantidade > p->topo){
         printf("Nao existem tantos dados para serem retirados da pilha.\n");
     }
-    while(pop(p, &a) && removidos < quantidade){
+    while(pop(p, &a) && *removidos < quantidade){
         printf("O valor %d foi removido\n", a);
-        removidos++;
-    }
-    return removidos;
+        (*removidos)++;
+    }   
+    return 1;
 }
 
 int inverte_pilha(t_pilha *p){
