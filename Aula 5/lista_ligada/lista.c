@@ -50,13 +50,12 @@ void insere_fim(int i, t_lista * lista){
 int remove_fim(t_lista *lista){
     //cenário 1: lista vazia
     if(lista_vazia(lista)) return -1;
-    int temp;
     // cenário 2: lista tem um elemento só 
+    int temp;
     if(lista->primeiro == lista->ultimo){
         temp = lista->primeiro->info;
         free(lista->primeiro);
         lista->primeiro = lista->ultimo = NULL;
-        return temp;
     }else{
         //cenário 3: lista tem mais que um elemento
         t_no * runner = lista->primeiro;

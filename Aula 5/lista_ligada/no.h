@@ -5,4 +5,4 @@ typedef struct no{
     struct no * prox;
 } t_no;
 
-t_no * constroi_no(int info);
+t_no * constroi_no(int);
