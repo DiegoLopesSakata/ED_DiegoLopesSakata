@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include "no.h"
+
+typedef struct t_no{
+    t_no * topo;
+} t_pilha;
+
+void constroi_pilha(t_pilha *);
+int pilha_vazia(t_pilha *);
+void push(int, t_pilha *);
+int pop(t_pilha *, int *);
+void exibe_pilha(t_pilha *);
+int pilha_invertida(t_pilha *);
+int transfere_pilha(t_pilha *, t_pilha *);
