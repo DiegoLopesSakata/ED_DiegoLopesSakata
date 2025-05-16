@@ -2,3 +2,4 @@ beecrowd
 *.txt
 *.exe
 *.o
+.vscode
