@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include "no.h"
+#include "C:\Users\aluno\Desktop\Estrutura de Dados\Aula 5\no\no.h"
+
 typedef struct {
     t_no * primeiro;
     t_no * ultimo;
