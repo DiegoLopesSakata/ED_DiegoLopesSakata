@@ -24,8 +24,8 @@ int fila_vazia(t_fila * fila){
 
 int inserir_fila(int valor, t_fila * fila){
     if(fila_cheia(fila)) return 0;
-    fila->ultimo = proximo(fila->ultimo, fila->capacidade);
     fila->dados[fila->ultimo] = valor;
+    fila->ultimo = proximo(fila->ultimo, fila->capacidade);
     fila->ocupacao++;
     return 1;
 }
