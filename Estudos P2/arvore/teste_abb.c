@@ -13,6 +13,7 @@ int main(){
         printf("2. Adicionar um valor especifico\n");
         printf("3. Exibir arvore\n");
         printf("4. buscar valor\n");
+        printf("5. buscar quantas vezes um valor se repete\n");
         printf("0. Sair\n");
         printf("Escolha uma opcao: ");
         scanf("%d", &op);
@@ -41,6 +42,13 @@ int main(){
                     else{
                         printf("%d nao esta na arvore!\n", x);
                     }
+                    break;}
+            case 5:{
+                    int count, x;
+                    printf("Qual o valor vc deseja procurar? ");
+                    scanf("%d", &x);
+                    count = cont_x(x, &abb);
+                    printf("%d aparece %d vezes na arvore!\n", x, count);
                     break;}
             case 0: printf("Saindo...\n");
                     break;

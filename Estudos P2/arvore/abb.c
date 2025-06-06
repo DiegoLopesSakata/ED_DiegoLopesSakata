@@ -69,3 +69,21 @@ int busca_abb(int x, t_abb * abb){
     if(abb_vazia(abb)) return 0;
     return busca_rec(abb->raiz, x);
 }
+
+int cont_x(int x, t_abb * abb){
+    if(abb_vazia(abb)) return 0;
+    int count = 0;
+    t_no * runner = abb->raiz;
+    while(runner != NULL){
+        if(runner->info == x){
+            count++;
+        }
+        if(runner->info < x){
+            runner = runner->dir;
+        }
+        else{
+            runner = runner->esq;
+        }
+    }
+    return count;
+}
